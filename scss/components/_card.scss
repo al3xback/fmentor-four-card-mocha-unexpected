@@ -1,0 +1,126 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as func;
+
+.section,
+.section__head,
+.card__list,
+.card__list-block,
+.card__list-item {
+	display: flex;
+	flex-direction: column;
+}
+
+.section {
+	align-items: center;
+	gap: func.em(76, var.$font-size-primary);
+	width: 100%;
+	max-width: func.em(420, var.$font-size-primary);
+	margin: func.em(40, var.$font-size-primary) 0
+		func.em(60, var.$font-size-primary);
+}
+
+.section__head {
+	padding-top: func.em(40, var.$font-size-primary);
+	text-align: center;
+}
+
+.section__title {
+	font-weight: var.$font-weight-200;
+}
+
+.section__subtitle {
+	margin-bottom: func.em(16, 24);
+	font-size: func.em(24, var.$font-size-primary);
+	color: var.$color-dark-blue;
+	line-height: 1.25;
+}
+
+.card__list,
+.card__list-block {
+	gap: func.em(24, var.$font-size-primary);
+}
+
+.card__list-item {
+	position: relative;
+	min-height: func.em(220, var.$font-size-primary);
+	padding: func.em(24, var.$font-size-primary);
+	background-color: var.$color-white;
+	border-radius: 8px;
+	box-shadow: 0px func.em(15, var.$font-size-primary)
+		func.em(20, var.$font-size-primary) 0 rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+}
+
+.card__list-item::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: func.em(4, var.$font-size-primary);
+	background-color: transparent;
+}
+
+.card__list-item--supervisor::before {
+	background-color: var.$color-cyan;
+}
+
+.card__list-item--team-builder::before {
+	background-color: var.$color-red;
+}
+
+.card__list-item--karma::before {
+	background-color: var.$color-orange;
+}
+
+.card__list-item--calculator::before {
+	background-color: var.$color-blue;
+}
+
+.card__title {
+	margin-bottom: func.em(8, 20);
+}
+
+.card__desc {
+	font-size: func.em(13, var.$font-size-primary);
+}
+
+.card__image {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: auto;
+}
+
+.card__image img {
+	width: func.em(56, var.$font-size-primary);
+	height: func.em(56, var.$font-size-primary);
+}
+
+@media (min-width: 48em) {
+	.section {
+		gap: func.em(60, var.$font-size-primary);
+		max-width: func.em(1110, var.$font-size-primary);
+	}
+
+	.section__head {
+		max-width: func.em(540, var.$font-size-primary);
+	}
+
+	.section__title,
+	.section__subtitle {
+		font-size: func.em(36, var.$font-size-primary);
+	}
+
+	.section__subtitle {
+		margin-bottom: func.em(16, 36);
+	}
+
+	.card__list {
+		flex-direction: row;
+	}
+
+	.card__list-block {
+		justify-content: center;
+		flex: 1;
+	}
+}
