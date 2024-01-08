@@ -27,7 +27,7 @@ describe('DOM', () => {
 		}
 	});
 
-	it('should have title, subtitle and description of section head equal to mockup', () => {
+	it('should have title, subtitle and description of section head equal to mockup data', () => {
 		const sectionHeadEl = document.querySelector('.section__head');
 		const sectionTitle =
 			sectionHeadEl.querySelector('.section__title').textContent;
@@ -56,13 +56,13 @@ describe('DOM', () => {
 			desc: getFormattedText(sectionDesc),
 		};
 
-		const mockupData = {
+		const mockupSectionHeadData = {
 			title: 'Reliable, efficient delivery',
 			subtitle: 'Powered by Technology',
 			desc: 'Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful',
 		};
 
-		expect(sectionHeadData, 'to satisfy', mockupData);
+		expect(sectionHeadData, 'to satisfy', mockupSectionHeadData);
 	});
 
 	it("should have a 'card__list' class as a wrapper element", () => {
@@ -73,7 +73,7 @@ describe('DOM', () => {
 		expect(cardListChildrenLength, 'to be above', 1);
 	});
 
-	it('should have three columns of card item to the side in desktop view', () => {
+	it('should have three block elements to the side in desktop view', () => {
 		const cardBlocks = document.querySelectorAll('.card__list-block');
 
 		expect(cardBlocks.length, 'to equal', 3);
