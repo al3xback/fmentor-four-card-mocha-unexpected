@@ -74,8 +74,8 @@ describe('DOM', () => {
 	});
 
 	it('should have three block elements to the side in desktop view', () => {
-		const cardBlocks = document.querySelectorAll('.card__list-block');
+		const cardBlockElements = document.querySelectorAll('.card__list-block');
 
-		expect(cardBlocks.length, 'to equal', 3);
+		expect(cardBlockElements.length, 'to equal', 3);
 	});
 });
