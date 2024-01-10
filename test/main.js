@@ -73,7 +73,7 @@ describe('DOM', () => {
 		expect(cardListChildrenLength, 'to be above', 1);
 	});
 
-	it('should have three block elements to the side in desktop view', () => {
+	it('should have three card block elements to the side in desktop view', () => {
 		const cardBlockElements = document.querySelectorAll('.card__list-block');
 
 		expect(cardBlockElements.length, 'to equal', 3);
