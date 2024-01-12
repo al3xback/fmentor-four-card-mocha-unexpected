@@ -29,11 +29,11 @@ describe('DOM', () => {
 
 	it('should have title, subtitle and description of section head equal to mockup data', () => {
 		const sectionHeadEl = document.querySelector('.section__head');
-		const sectionTitle =
+		const sectionHeadTitle =
 			sectionHeadEl.querySelector('.section__title').textContent;
-		const sectionSubtitle =
+		const sectionHeadSubtitle =
 			sectionHeadEl.querySelector('.section__subtitle').textContent;
-		const sectionDesc =
+		const sectionHeadDesc =
 			sectionHeadEl.querySelector('.section__desc').textContent;
 
 		const getFormattedText = (text) => {
@@ -51,9 +51,9 @@ describe('DOM', () => {
 		};
 
 		const sectionHeadData = {
-			title: getFormattedText(sectionTitle),
-			subtitle: getFormattedText(sectionSubtitle),
-			desc: getFormattedText(sectionDesc),
+			title: getFormattedText(sectionHeadTitle),
+			subtitle: getFormattedText(sectionHeadSubtitle),
+			desc: getFormattedText(sectionHeadDesc),
 		};
 
 		const mockupSectionHeadData = {
@@ -74,8 +74,8 @@ describe('DOM', () => {
 	});
 
 	it('should have three card block elements to the side in desktop view', () => {
-		const cardBlockElements = document.querySelectorAll('.card__list-block');
+		const cardBlockEls = document.querySelectorAll('.card__list-block');
 
-		expect(cardBlockElements.length, 'to equal', 3);
+		expect(cardBlockEls.length, 'to equal', 3);
 	});
 });
