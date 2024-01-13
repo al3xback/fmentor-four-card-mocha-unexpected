@@ -1,7 +1,7 @@
 {
 	"name": "fmentor-four-card-mocha-unexpected",
 	"version": "1.0.0",
-	"description": "four card feature section using mocha and unexpected testing",
+	"description": "four card feature section using mocha and unexpected",
 	"main": "index.js",
 	"type": "module",
 	"scripts": {
