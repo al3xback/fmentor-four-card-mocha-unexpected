@@ -29,13 +29,13 @@ describe('DOM', () => {
 
 	it('should have title, subtitle and description of section head equal to mockup data', () => {
 		const sectionHeadEl = document.querySelector('.section__head');
-		const sectionHeadTitle = sectionHeadEl.querySelector(
+		const cardsSummaryTitle = sectionHeadEl.querySelector(
 			'.cards-summary__title'
 		).textContent;
-		const sectionHeadSubtitle = sectionHeadEl.querySelector(
+		const cardsSummarySubtitle = sectionHeadEl.querySelector(
 			'.cards-summary__subtitle'
 		).textContent;
-		const sectionHeadDesc = sectionHeadEl.querySelector(
+		const cardsSummaryDesc = sectionHeadEl.querySelector(
 			'.cards-summary__desc'
 		).textContent;
 
@@ -54,9 +54,9 @@ describe('DOM', () => {
 		};
 
 		const sectionHeadData = {
-			title: getFormattedText(sectionHeadTitle),
-			subtitle: getFormattedText(sectionHeadSubtitle),
-			desc: getFormattedText(sectionHeadDesc),
+			title: getFormattedText(cardsSummaryTitle),
+			subtitle: getFormattedText(cardsSummarySubtitle),
+			desc: getFormattedText(cardsSummaryDesc),
 		};
 
 		const mockupSectionHeadData = {
