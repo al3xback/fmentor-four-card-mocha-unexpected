@@ -29,12 +29,15 @@ describe('DOM', () => {
 
 	it('should have title, subtitle and description of section head equal to mockup data', () => {
 		const sectionHeadEl = document.querySelector('.section__head');
-		const sectionHeadTitle =
-			sectionHeadEl.querySelector('.section__title').textContent;
-		const sectionHeadSubtitle =
-			sectionHeadEl.querySelector('.section__subtitle').textContent;
-		const sectionHeadDesc =
-			sectionHeadEl.querySelector('.section__desc').textContent;
+		const sectionHeadTitle = sectionHeadEl.querySelector(
+			'.cards-summary__title'
+		).textContent;
+		const sectionHeadSubtitle = sectionHeadEl.querySelector(
+			'.cards-summary__subtitle'
+		).textContent;
+		const sectionHeadDesc = sectionHeadEl.querySelector(
+			'.cards-summary__desc'
+		).textContent;
 
 		const getFormattedText = (text) => {
 			let newText = text.trim();
@@ -65,8 +68,8 @@ describe('DOM', () => {
 		expect(sectionHeadData, 'to satisfy', mockupSectionHeadData);
 	});
 
-	it("should have a 'card__list' class as a wrapper element", () => {
-		const cardListEl = document.querySelector('.card__list');
+	it("should have a 'cards' class as a wrapper element", () => {
+		const cardListEl = document.querySelector('.cards');
 		const cardListChildrenLength = cardListEl.children.length;
 
 		expect(!!cardListEl, 'to equal', true);
@@ -74,7 +77,7 @@ describe('DOM', () => {
 	});
 
 	it('should have three card block elements to the side in desktop view', () => {
-		const cardBlockEls = document.querySelectorAll('.card__list-block');
+		const cardBlockEls = document.querySelectorAll('.cards__block');
 
 		expect(cardBlockEls.length, 'to equal', 3);
 	});
