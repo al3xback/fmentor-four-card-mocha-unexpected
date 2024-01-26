@@ -18,17 +18,15 @@
 
 .section__head {
 	padding-top: func.em(40, var.$font-size-primary);
-	text-align: center;
 }
 
 @media (min-width: 48em) {
 	.section {
-		align-items: center;
 		gap: func.em(60, var.$font-size-primary);
 		max-width: func.em(1110, var.$font-size-primary);
 	}
 
 	.section__head {
-		max-width: func.em(540, var.$font-size-primary);
+		align-items: center;
 	}
 }
