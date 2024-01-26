@@ -9,6 +9,10 @@
 	flex-direction: column;
 }
 
+.cards-summary {
+	text-align: center;
+}
+
 .cards-summary__title {
 	font-weight: var.$font-weight-200;
 }
@@ -81,7 +85,6 @@
 @media (min-width: 48em) {
 	.cards-summary {
 		max-width: func.em(540, var.$font-size-primary);
-		text-align: center;
 	}
 
 	.cards-summary__title,
