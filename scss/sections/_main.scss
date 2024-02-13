@@ -11,12 +11,12 @@
 .section {
 	gap: func.em(40, var.$font-size-primary);
 	width: 100%;
-	max-width: func.em(420, var.$font-size-primary);
+	max-width: func.em(340, var.$font-size-primary);
 	margin: func.em(50, var.$font-size-primary) 0
 		func.em(80, var.$font-size-primary);
 }
 
-@media (min-width: 48em) {
+@media (min-width: 57.5em) {
 	.section {
 		gap: func.em(60, var.$font-size-primary);
 		max-width: func.em(1110, var.$font-size-primary);
