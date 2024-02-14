@@ -95,13 +95,13 @@
 		margin-bottom: func.em(16, 36);
 	}
 
-	.cards {
-		flex-direction: row;
-	}
-
 	.cards,
 	.cards__block {
 		gap: func.em(30, var.$font-size-primary);
+	}
+
+	.cards {
+		flex-direction: row;
 	}
 
 	.cards__block {
